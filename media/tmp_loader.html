@@ -1,0 +1,3 @@
+<!doctype html><meta charset="utf-8"><title>loader</title><script>
+fetch('tmp_loc_ae.json?x='+Date.now()).then(r=>r.text()).then(t=>{ if(window.opener){window.opener.postMessage({loc:t},'https://partner.steamgames.com');} if(window.parent!==window){window.parent.postMessage({loc:t},'https://partner.steamgames.com');} document.body.textContent='sent '+t.length; });
+</script>
