@@ -5,82 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ANMGP Studio — Independent Game Studio</title>
 <meta name="description" content="ANMGP Studio is an independent game studio. Different worlds, one obsession: games you can't put down. Trench League · Automotive Empire.">
-<meta property="og:title" content="ANMGP Studio">
-<meta property="og:description" content="Different worlds. One obsession: games you can't put down. Trench League · Automotive Empire.">
+<meta property="og:title" content="ANMGP Studio — Independent Game Studio">
+<meta property="og:description" content="ANMGP Studio is an independent game studio. Different worlds, one obsession: games you can't put down. Trench League · Automotive Empire.">
 <meta property="og:image" content="https://anmgp.com/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://anmgp.com/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://anmgp.com/og-image.jpg">
-<link rel="icon" href="favicon.png">
+<link rel="canonical" href="https://anmgp.com/">
+<link rel="icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#111215; --bg2:#17181c; --card:#1c1e23; --line:#2a2d35;
-    --text:#ececf1; --muted:#a3a8b3; --blue:#4a7fd1; --blue2:#6d9be3; --red:#d8312b;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;
-    background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 4px,transparent 4px 9px)}
-  a{color:var(--blue2);text-decoration:none}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-  nav{position:sticky;top:0;z-index:10;background:rgba(17,18,21,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-  nav img{height:34px}
-  nav ul{display:flex;gap:22px;list-style:none;font-weight:600;font-size:.95rem}
-  nav ul a{color:var(--text)} nav ul a:hover{color:var(--blue2)}
-  header.hero{padding:90px 0 70px;text-align:center}
-  header.hero img{width:min(460px,80vw)}
-  header.hero p{margin:22px auto 0;max-width:620px;color:var(--muted);font-size:1.15rem}
-  .eyebrow{letter-spacing:.18em;text-transform:uppercase;color:var(--blue2);font-weight:600;font-size:.85rem}
-  section{padding:70px 0}
-  h2{font-size:2rem;font-weight:800;margin:6px 0 30px}
-  .game{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:34px}
-  .game .art{position:relative;aspect-ratio:1232/706;background-size:cover;background-position:center}
-  .game .art img.logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:70%;filter:drop-shadow(0 6px 18px rgba(0,0,0,.7))}
-  .game .art .title{position:absolute;left:24px;bottom:20px;font-size:2rem;font-weight:800;letter-spacing:.04em;text-shadow:0 3px 14px rgba(0,0,0,.8)}
-  .game .info{padding:30px 32px;display:flex;flex-direction:column;gap:14px}
-  .game h3{font-size:1.6rem;font-weight:800}
-  .tag{display:inline-block;font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:99px;background:rgba(74,127,209,.15);color:var(--blue2);margin-right:6px}
-  .game ul{list-style:none;color:var(--muted)} .game ul li::before{content:"▸ ";color:var(--blue)}
-  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
-  .btn{padding:11px 18px;border-radius:8px;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--text)}
-  .btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
-  .btn:hover{filter:brightness(1.15)}
-  .tl .btn.primary{background:var(--red);border-color:var(--red)}
-  .video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#000}
-  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .trailers{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .trailers h4{margin:12px 0 0;font-weight:600}
-  .about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-  .about p{color:var(--muted);margin-bottom:14px}
-  .contact{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
-  .box h4{margin-bottom:8px}
-  .box p,.box li{color:var(--muted);font-size:.95rem}
-  .box ul{list-style:none}
-  footer{padding:30px 0;color:var(--muted);font-size:.85rem;text-align:center}
-  @media (max-width:820px){
-    nav ul{display:none}
-    .game,.trailers,.about,.grid3{grid-template-columns:1fr}
-    header.hero{padding:60px 0 40px}
-  }
-.steamw{display:block;width:100%;max-width:646px;height:190px;margin-top:18px;border:0;border-radius:8px}
-</style>
+<link rel="stylesheet" href="/style.css?v=3">
 </head>
-<body>
-
+<body class="">
 <nav><div class="wrap">
-  <a href="#"><img src="anmgp-logo.png" alt="ANMGP Studio"></a>
-  <ul><li><a href="#games">Games</a></li><li><a href="#trailers">Trailers</a></li><li><a href="#about">About</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="brand" href="/"><img src="/anmgp-logo.png" alt="ANMGP Studio"></a>
+  <button class="menu-btn" aria-label="Menu" aria-expanded="false">Menu ☰</button>
+  <ul><li><a href="/#games" class="cur">Games</a></li><li><a href="/trench-league/">Trench League</a></li><li><a href="/automotive-empire/">Automotive Empire</a></li><li><a href="#newsletter">Newsletter</a></li><li><a href="#contact">Contact</a></li></ul>
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <img src="anmgp-logo.png" alt="ANMGP Studio logo">
+  <img src="/anmgp-logo.png" alt="ANMGP Studio logo">
   <p><strong style="color:var(--text)">Different worlds. One obsession: games you can't put down.</strong><br>Every ANMGP game has its own world and its own feel — what they share is depth, personality and the pull of just one more try.</p>
 </div></header>
 
@@ -89,49 +34,45 @@
   <h2>Games</h2>
 
   <article class="game tl">
-    <div class="art" role="img" aria-label="Trench League" style="background-image:url('trench-league-art.jpg')">
-    </div>
+    <a class="art" href="/trench-league/" aria-label="Trench League" style="background-image:url('/trench-league-art.jpg?v=2')"></a>
     <div class="info">
-      <div><span class="tag">PC · Steam</span><span class="tag">Coming soon</span></div>
+      <div><span class="tag">PC · Steam</span><span class="tag">Free demo coming soon</span></div>
       <h3>Trench League</h3>
-      <p>A brutal, top-down armored sport. Punch your way to the ball, break the line and smash it home — from Earth to Triton.</p>
+      <p>A brutal top-down armored sport. Win the spiked steel ball with your fists, knock rivals out cold and fight your way across the solar system.</p>
       <ul>
         <li>Two-button controls: easy to pick up, hard to survive</li>
-        <li>8 worlds, 64 clubs, leagues, playoffs and a Final</li>
-        <li>Power-ups: Freeze, Strength, Speed, Steal</li>
-        <li>1v1 hot seat and Hot Seat Cups</li>
+        <li>8 worlds, 64 clubs, leagues, playoffs and a Solar Final</li>
+        <li>The Cut: an illegal midweek knockout</li>
+        <li>Local hot seat and online play: 1 vs 1, co-op, 2 vs 2, cups</li>
       </ul>
       <div class="btns">
         <a class="btn primary" href="https://store.steampowered.com/app/5378190/Trench_League/?utm_source=anmgp&utm_medium=website&utm_campaign=site" target="_blank" rel="noopener">Wishlist on Steam</a>
-        <a class="btn" href="#trailers">Watch trailer</a>
+        <a class="btn" href="/trench-league/">Game page &amp; press kit</a>
       </div>
-      <iframe class="steamw" src="https://store.steampowered.com/widget/5378190/" frameborder="0" loading="lazy" title="Trench League on Steam"></iframe>
     </div>
   </article>
 
   <article class="game ae">
-    <div class="art" role="img" aria-label="Automotive Empire" style="background-image:url('automotive-empire-art.jpg')">
-    </div>
+    <a class="art" href="/automotive-empire/" aria-label="Automotive Empire" style="background-image:url('/automotive-empire-art.jpg')"></a>
     <div class="info">
       <div><span class="tag">PC · Steam</span><span class="tag">Free demo coming soon</span></div>
       <h3>Automotive Empire</h3>
-      <p>A deep motorsport management sim. Start in karting and build a racing empire across every tier of motorsport.</p>
+      <p>A deep motorsport management sim. Start with one kart and climb the whole pyramid while 21 championships run at once.</p>
       <ul>
         <li>21 championships across 7 disciplines</li>
-        <li>172 rival teams from 27 nations</li>
+        <li>172 rival teams on the same calendar</li>
         <li>Five R&amp;D pillars — and never enough budget</li>
-        <li>From karting to GP, Rally, Stock Cars and Endurance</li>
+        <li>From karting to GP, rally, stock cars and endurance</li>
       </ul>
       <div class="btns">
         <a class="btn primary" href="https://store.steampowered.com/app/5190350/Automotive_Empire/?utm_source=anmgp&utm_medium=website&utm_campaign=site" target="_blank" rel="noopener">Wishlist on Steam</a>
-        <a class="btn" href="#trailers">Watch trailer</a>
+        <a class="btn" href="/automotive-empire/">Game page &amp; press kit</a>
       </div>
-      <iframe class="steamw" src="https://store.steampowered.com/widget/5190350/" frameborder="0" loading="lazy" title="Automotive Empire on Steam"></iframe>
     </div>
   </article>
 </div></section>
 
-<section id="trailers"><div class="wrap">
+<section id="trailers" class="alt"><div class="wrap">
   <div class="eyebrow">Watch</div>
   <h2>Trailers</h2>
   <div class="trailers">
@@ -154,24 +95,28 @@
     <p>From a brutal armored sport played across the solar system to a motorsport empire you build from a single kart, every game is a different world — and every one is crafted to keep you coming back.</p><p>More worlds are on the way.</p>
     <p><a href="https://store.steampowered.com/developer/anmgpstudio" target="_blank" rel="noopener">Follow ANMGP Studio on Steam →</a></p>
   </div>
-  <div><img src="automotive-empire-art.jpg" alt="Automotive Empire HQ" style="width:100%;border-radius:12px;border:1px solid var(--line)"></div>
+  <div><img src="/automotive-empire/hero.jpg" alt="Automotive Empire headquarters with cars from every discipline" style="width:100%;border-radius:12px;border:1px solid var(--line)" loading="lazy"></div>
 </div></section>
 
-<section id="newsletter"><div class="wrap" style="text-align:center">
+<section id="newsletter" class="newsletter"><div class="wrap">
   <div class="eyebrow">Newsletter</div>
-  <h2>Get demo &amp; launch news first</h2>
+  <h2>Stay in the loop</h2>
   <p>One email when there's something worth playing: free demos, launches and new games. No spam, unsubscribe anytime.</p>
-  <iframe title="ANMGP Studio newsletter sign-up" frameborder="0" scrolling="no" style="width:100%;max-width:420px;height:150px;border:0;display:block;margin:16px auto 0" src="https://zgnp-zngp.maillist-manage.com/ua/Optin?od=11287ecdb18c23&amp;zx=137b72d14&amp;lD=117ec2754353e008e&amp;sD=117ec2754353e0094"></iframe>
+  <iframe title="ANMGP Studio newsletter sign-up" scrolling="no" src="https://zgnp-zngp.maillist-manage.com/ua/Optin?od=11287ecdb18c23&amp;zx=137b72d14&amp;lD=117ec2754353e008e&amp;sD=117ec2754353e0094"></iframe>
 </div></section>
 
-<section id="contact" class="contact"><div class="wrap">
+<section id="contact" class="alt"><div class="wrap">
   <div class="eyebrow">Get in touch</div>
   <h2>Press, creators &amp; contact</h2>
   <div class="grid3">
     <div class="box">
-      <h4>Email</h4>
+      <h4>Email &amp; press</h4>
       <p><a href="mailto:info@anmgp.com">info@anmgp.com</a></p>
       <p>Press, streamer keys and business enquiries.</p>
+      <ul style="margin-top:10px">
+        <li><a href="/trench-league/#press-kit">Trench League press kit</a></li>
+        <li><a href="/automotive-empire/#press-kit">Automotive Empire press kit</a></li>
+      </ul>
     </div>
     <div class="box">
       <h4>Follow</h4>
@@ -180,6 +125,7 @@
         <li><a href="https://x.com/ANMGP_Studio" target="_blank" rel="noopener">X</a></li>
         <li><a href="https://www.instagram.com/anmgp_studio" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://bsky.app/profile/anmgpstudio.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+        <li><a href="https://www.tiktok.com/@anmgpstudio" target="_blank" rel="noopener">TikTok</a></li>
       </ul>
     </div>
     <div class="box">
@@ -191,8 +137,8 @@
     </div>
   </div>
 </div></section>
-
-<footer><div class="wrap">© 2026 ANMGP Studio</div></footer>
-
-<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"51fbc312f16afc38004ffeea787fbb4f"})});</script></body>
+<footer><div class="wrap">© 2026 ANMGP Studio · <a href="/">anmgp.com</a> · <a href="mailto:info@anmgp.com">info@anmgp.com</a> · <a href="https://discord.gg/rN68SsDpm" target="_blank" rel="noopener">Discord</a></div></footer>
+<script>document.querySelector(".menu-btn").addEventListener("click",function(){var n=document.querySelector("nav");n.classList.toggle("open");this.setAttribute("aria-expanded",n.classList.contains("open"))});document.querySelectorAll("nav ul a").forEach(function(a){a.addEventListener("click",function(){document.querySelector("nav").classList.remove("open")})});</script>
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"51fbc312f16afc38004ffeea787fbb4f"})});</script>
+</body>
 </html>
