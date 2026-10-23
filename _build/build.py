@@ -24,18 +24,20 @@ def head(title, desc, og_img, url, body_cls=''):
 <link rel="icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=3">
+<link rel="stylesheet" href="/style.css?v=4">
 </head>
 <body class="{body_cls}">
 '''
 
 def nav(cur):
-    items = [('/#games','Games','home'),('/trench-league/','Trench League','tl'),('/automotive-empire/','Automotive Empire','ae'),('#newsletter','Newsletter','nl'),('#press-kit' if cur in ('tl','ae') else '/#contact','Press' if cur in ('tl','ae') else 'Contact','x')]
-    lis = ''.join(f'<li><a href="{h}"{" class=\"cur\"" if k==cur else ""}>{t}</a></li>' for h,t,k in items)
+    last = ('#press-kit','Press') if cur in ('tl','ae') else ('/#contact','Contact')
+    c = lambda k: ' class="cur"' if k==cur else ''
+    games = f'''<li class="dd"><a href="/#games"{c('tl') if cur=='tl' else c('ae')} aria-haspopup="true">Games <span class="caret">▾</span></a>
+    <ul class="sub"><li><a href="/trench-league/"{c('tl')}>Trench League</a></li><li><a href="/automotive-empire/"{c('ae')}>Automotive Empire</a></li></ul></li>'''
     return f'''<nav><div class="wrap">
   <a class="brand" href="/"><img src="/anmgp-logo.png" alt="ANMGP Studio"></a>
   <button class="menu-btn" aria-label="Menu" aria-expanded="false">Menu ☰</button>
-  <ul>{lis}</ul>
+  <ul><li><a href="/"{c('home')}>Home</a></li>{games}<li><a href="#newsletter">Newsletter</a></li><li><a href="{last[0]}">{last[1]}</a></li></ul>
 </div></nav>
 '''
 

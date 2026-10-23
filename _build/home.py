@@ -77,7 +77,7 @@ page = b.head("ANMGP Studio — Independent Game Studio",
     <p>From a brutal armored sport played across the solar system to a motorsport empire you build from a single kart, every game is a different world — and every one is crafted to keep you coming back.</p><p>More worlds are on the way.</p>
     <p><a href="https://store.steampowered.com/developer/anmgpstudio" target="_blank" rel="noopener">Follow ANMGP Studio on Steam →</a></p>
   </div>
-  <div><img src="/automotive-empire/hero.jpg" alt="Automotive Empire headquarters with cars from every discipline" style="width:100%;border-radius:12px;border:1px solid var(--line)" loading="lazy"></div>
+  <div><img src="/press/anmgp-studio-logo-dark.jpg" alt="ANMGP Studio logo" style="width:100%;border-radius:12px;border:1px solid var(--line)" loading="lazy"></div>
 </div></section>
 
 {b.newsletter('Stay in the loop')}
