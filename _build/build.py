@@ -24,7 +24,7 @@ def head(title, desc, og_img, url, body_cls=''):
 <link rel="icon" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=4">
+<link rel="stylesheet" href="/style.css?v=5">
 </head>
 <body class="{body_cls}">
 '''
@@ -66,7 +66,7 @@ def game_page(g):
     slug, P = g['slug'], f"{R}/{g['slug']}/press"
     steam = f"https://store.steampowered.com/app/{g['appid']}/{g['steam_name']}/?utm_source=anmgp&utm_medium=website&utm_campaign={slug}"
     shots = sorted(glob.glob(f'{P}/{slug}-screenshot-*.jpg'))
-    caps = sorted(glob.glob(f'{P}/{slug}-capsule-*.jpg'))
+    caps = sorted(glob.glob(f'{P}/{slug}-capsule-*.jpg')) + sorted(glob.glob(f'{P}/{slug}-keyart-*.jpg'))
     # zip
     zp = f'{P}/{slug}-presskit.zip'
     fact_txt = f"{g['name']} — press kit\nANMGP Studio · https://anmgp.com/{slug}/\n\n" + '\n'.join(f'{k}: {html.unescape(v)}' for k, v in g['facts_txt']) + \
@@ -84,11 +84,11 @@ def game_page(g):
     feats = ''.join(f'<li>{f}</li>' for f in g['features'])
     shot_html = ''.join(f'<a href="/{os.path.relpath(s,R)}" target="_blank" rel="noopener"><img src="/{os.path.relpath(s,R)}" alt="{g["name"]} screenshot" loading="lazy"></a>' for s in shots)
     dls = dl(zp, 'Full press kit (.zip)') + dl(f'{P}/{slug}-logo.png', 'Game logo (PNG, transparent)') + dl(f'{R}/press/anmgp-studio-logo.png', 'ANMGP Studio logo (PNG)') + \
-        ''.join(dl(c, 'Capsule ' + c.split('capsule-')[1].replace('.jpg', '').replace('-', ' ')) for c in caps) + \
+        ''.join(dl(c, ('Capsule ' + c.split('capsule-')[1] if 'capsule-' in c else 'Key art, wide ' + c.split('wide-')[1]).replace('.jpg', '').replace('-', ' ')) for c in caps) + \
         ''.join(dl(s, f'Screenshot {i}') for i, s in enumerate(shots, 1))
     logo_html = f'<img class="glogo" src="/{slug}/press/{slug}-logo.png" alt="{g["name"]}">' if g['hero_logo'] else f'<h1>{g["name"]}</h1>'
     page = head(f"{g['name']} — ANMGP Studio", html.escape(g['short']), f"{slug}/press/{slug}-capsule-main-1232x706.jpg", f'{slug}/', g['cls']) + nav(g['cls']) + f'''
-<header class="ghero" style="background-image:url('/{slug}/hero.jpg')"><div class="wrap">
+<header class="ghero" style="background-image:url('/{slug}/hero.jpg?v=2')"><div class="wrap">
   {logo_html}
   <div>{''.join(f'<span class="tag">{t}</span>' for t in g['tags'])}</div>
   <p class="lead">{g['tagline']}</p>
@@ -144,7 +144,7 @@ def game_page(g):
 TL = dict(slug='trench-league', name='Trench League', appid=5378190, steam_name='Trench_League', cls='tl', yt='cHix4J8GH2E', hero_logo=True,
   tags=['PC · Steam', 'Free demo coming soon', 'Local &amp; online multiplayer'],
   tagline='A brutal top-down armored sport. Two buttons, one spiked steel ball, and a crowd that wants blood more than goals.',
-  short="A brutal top-down bloodsport. Two buttons: punch, tackle, pass, shoot. Win the spiked steel ball with your fists, knock rivals out cold and watch the Reclaim drag them off. Run a club across 8 worlds and 64 teams, survive the illegal Cut, and fight friends on one screen or online.",
+  short="Punch your way to the spiked steel ball and smash it into the enemy cage. The side with the most breaches wins. Knock rivals out and the Reclaim drags them off. Face opponents from different planets of the Solar System and fight your way to the Solar Final! Test your skills against real opponents!",
   about_h='Blood. Steel. Obedience.',
   long_html='<p>In 2300 the Solar Government does not ban the Trench. It funds the lights and puts the Eye, a Census camera, in every wall. Nine armoured players a side, one spiked steel ball, and a crowd that wants blood more than goals.</p><p class="muted">Win the ball with your fists, knock rivals out cold and watch the Reclaim drag them off the pitch. Run a club across 8 worlds and 64 teams, survive the illegal midweek Cut, and settle it with friends on one screen or online.</p>',
   long_txt="In 2300 the Solar Government does not ban the Trench. It funds the lights and puts the Eye, a Census camera, in every wall. Nine armoured players a side, one spiked steel ball, and a crowd that wants blood more than goals.\nWin the ball with your fists, knock rivals out cold and watch the Reclaim drag them off the pitch. Run a club across 8 worlds and 64 teams, survive the illegal midweek Cut, and settle it with friends on one screen or online.",
@@ -166,7 +166,7 @@ TL['facts_txt'] = [(k, v.split('<a')[0].strip() if '<a' in v and k not in ('Stea
 AE = dict(slug='automotive-empire', name='Automotive Empire', appid=5190350, steam_name='Automotive_Empire', cls='ae', yt='Cq5T_GW8Kr4', hero_logo=True,
   tags=['PC · Steam', 'Free demo coming soon', 'Single-player'],
   tagline='Start with one kart. Take the whole pyramid. A deep motorsport management sim where 21 championships run at once.',
-  short="Start with one kart in a small garage. Climb to GP while 21 championships in 7 disciplines run at once and 172 rival teams sign, research and spend on the same calendar. Design every part, build it in your own plant, and sell road cars to fund the racing.",
+  short="Start with one kart in a small garage. Expand your team from karting to the pinnacle of motorsport. Compete against 172 teams in 21 championships. Design every part, build and expand your campus. Enter the road car and racing parts markets and face another level of competition.",
   about_h='Start with one kart. Take the whole pyramid.',
   long_html='<p>Automotive Empire runs the whole motorsport pyramid as one living world. Karting, rally, touring cars, stock cars, endurance, open wheel and GP: 21 championships advance together, week by week.</p><p class="muted">You start with one kart team. 172 rival teams recruit, research and spend on the same calendar. Design every part, build it in your own plant, sign the people who make the difference, and sell road cars to pay for the racing.</p>',
   long_txt="Automotive Empire runs the whole motorsport pyramid as one living world. Karting, rally, touring cars, stock cars, endurance, open wheel and GP: 21 championships advance together, week by week.\nYou start with one kart team. 172 rival teams recruit, research and spend on the same calendar. Design every part, build it in your own plant, sign the people who make the difference, and sell road cars to pay for the racing.",

@@ -16,7 +16,7 @@ page = b.head("ANMGP Studio — Independent Game Studio",
   <h2>Games</h2>
 
   <article class="game tl">
-    <a class="art" href="/trench-league/" aria-label="Trench League" style="background-image:url('/trench-league-art.jpg?v=2')"></a>
+    <a class="art" href="/trench-league/" aria-label="Trench League" style="background-image:url('/trench-league-art.jpg?v=3')"></a>
     <div class="info">
       <div><span class="tag">PC · Steam</span><span class="tag">Free demo coming soon</span></div>
       <h3>Trench League</h3>
@@ -35,7 +35,7 @@ page = b.head("ANMGP Studio — Independent Game Studio",
   </article>
 
   <article class="game ae">
-    <a class="art" href="/automotive-empire/" aria-label="Automotive Empire" style="background-image:url('/automotive-empire-art.jpg')"></a>
+    <a class="art" href="/automotive-empire/" aria-label="Automotive Empire" style="background-image:url('/automotive-empire-art.jpg?v=2')"></a>
     <div class="info">
       <div><span class="tag">PC · Steam</span><span class="tag">Free demo coming soon</span></div>
       <h3>Automotive Empire</h3>

@@ -75,6 +75,7 @@ header.hero p{margin:22px auto 0;max-width:620px;color:var(--muted);font-size:1.
 .ghero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,18,21,.15) 0%,rgba(17,18,21,.55) 55%,var(--bg) 100%)}
 .ghero .wrap{position:relative;padding-top:120px;padding-bottom:48px;width:100%}
 .ghero .glogo{width:min(420px,75vw);display:block;margin-bottom:18px;filter:drop-shadow(0 8px 22px rgba(0,0,0,.8))}
+.ae .ghero .glogo{width:min(520px,85vw);box-sizing:border-box;background:rgba(243,236,222,.94);padding:16px 22px;border-radius:6px;filter:drop-shadow(0 8px 22px rgba(0,0,0,.6))}
 .ghero p.lead{color:#d9dbe1;margin:6px 0 22px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
 .cols{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
 .feat{list-style:none;display:grid;gap:12px}
