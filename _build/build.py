@@ -135,14 +135,14 @@ def game_page(g):
   </div>
   <h3 style="margin-top:34px">Downloads</h3>
   <div class="dl">{dls}</div>
-  <p class="note">Screenshots are real in-game captures. Assets may be used for coverage of {g['name']}. Last updated 22 Oct 2026.</p>
+  <p class="note">Screenshots are real in-game captures. Assets may be used for coverage of {g['name']}. Last updated 31 Oct 2026.</p>
 </div></section>
 ''' + footer()
     open(f'{R}/{slug}/index.html', 'w').write(page)
     return fact_txt
 
 TL = dict(slug='trench-league', name='Trench League', appid=5378190, steam_name='Trench_League', cls='tl', yt='cHix4J8GH2E', hero_logo=True,
-  tags=['PC · Steam', 'Free demo coming soon', 'Local &amp; online multiplayer'],
+  tags=['PC · Steam', 'Free demo out now', 'Local &amp; online multiplayer'],
   tagline='A brutal top-down armored sport. Two buttons, one spiked steel ball, and a crowd that wants blood more than goals.',
   short="Punch your way to the spiked steel ball and smash it into the enemy cage. The side with the most breaches wins. Knock rivals out and the Reclaim drags them off. Face opponents from different planets of the Solar System and fight your way to the Solar Final! Test your skills against real opponents!",
   about_h='Blood. Steel. Obedience.',
@@ -156,7 +156,7 @@ TL = dict(slug='trench-league', name='Trench League', appid=5378190, steam_name=
             '<b>The Cut:</b> an illegal midweek knockout. Win, and strike a loser&#8217;s player off their file.',
             '<b>Wounds, ageing and the Exit List</b>, plus Ironman careers.',
             '<b>Fight your friends:</b> 1 vs 1 and co-op on one screen, the Hot Seat Cup, and online play over Steam or PC to PC (1 vs 1, co-op, 2 vs 2, cups up to 32 players, ranked ladder).'],
-  facts_html=[('Developer / publisher','ANMGP Studio'),('Platform','PC (Windows) · Steam'),('Release','Coming soon · Free demo coming soon'),('Price','TBA'),
+  facts_html=[('Developer / publisher','ANMGP Studio'),('Platform','PC (Windows) · Steam'),('Release','Coming soon · Free demo out now on Steam'),('Price','TBA'),
               ('Genre','Top-down action sport with club management'),('Modes','Championship career, The Cut, custom matches vs CPU, local hot seat (1 vs 1, co-op, Hot Seat Cup), online (1 vs 1, co-op, 2 vs 2, cups &amp; tournaments, ranked ladder)'),
               ('Controls','Keyboard or gamepad'),('Steam','<a href="https://store.steampowered.com/app/5378190/Trench_League/" target="_blank" rel="noopener">store.steampowered.com/app/5378190</a>'),
               ('Trailer','<a href="https://www.youtube.com/watch?v=cHix4J8GH2E" target="_blank" rel="noopener">YouTube</a>'),('Press contact','<a href="mailto:info@anmgp.com">info@anmgp.com</a>')],

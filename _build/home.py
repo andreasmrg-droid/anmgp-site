@@ -18,7 +18,7 @@ page = b.head("ANMGP Studio — Independent Game Studio",
   <article class="game tl">
     <a class="art" href="/trench-league/" aria-label="Trench League" style="background-image:url('/trench-league-art.jpg?v=3')"></a>
     <div class="info">
-      <div><span class="tag">PC · Steam</span><span class="tag">Free demo coming soon</span></div>
+      <div><span class="tag">PC · Steam</span><span class="tag">Free demo out now</span></div>
       <h3>Trench League</h3>
       <p>A brutal top-down armored sport. Win the spiked steel ball with your fists, knock rivals out cold and fight your way across the solar system.</p>
       <ul>
