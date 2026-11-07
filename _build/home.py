@@ -16,7 +16,7 @@ page = b.head("ANMGP Studio — Independent Game Studio",
   <h2>Games</h2>
 
   <article class="game tl">
-    <a class="art" href="/trench-league/" aria-label="Trench League" style="background-image:url('/trench-league-art.jpg?v=3')"></a>
+    <a class="art" href="/trench-league/" aria-label="Trench League" style="background-image:url('/trench-league-art.jpg?v=4')"></a>
     <div class="info">
       <div><span class="tag">PC · Steam</span><span class="tag">Free demo out now</span></div>
       <h3>Trench League</h3>
