@@ -2,7 +2,7 @@ import os, glob, zipfile, html
 from PIL import Image
 R = '/home/claude/anmgp-site'
 NEWS = "https://zgnp-zngp.maillist-manage.com/ua/Optin?od=11287ecdb18c23&amp;zx=137b72d14&amp;lD=117ec2754353e008e&amp;sD=117ec2754353e0094"
-DISCORD = "https://discord.gg/rN68SsDpm"
+DISCORD = "https://discord.gg/CpWy34D3q"
 METRICOOL = '<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"51fbc312f16afc38004ffeea787fbb4f"})});</script>'
 MENU_JS = '<script>document.querySelector(".menu-btn").addEventListener("click",function(){var n=document.querySelector("nav");n.classList.toggle("open");this.setAttribute("aria-expanded",n.classList.contains("open"))});document.querySelectorAll("nav ul a").forEach(function(a){a.addEventListener("click",function(){document.querySelector("nav").classList.remove("open")})});</script>'
 
