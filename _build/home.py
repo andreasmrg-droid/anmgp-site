@@ -59,7 +59,7 @@ page = b.head("ANMGP Studio — Independent Game Studio",
   <h2>Trailers</h2>
   <div class="trailers">
     <div>
-      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/cHix4J8GH2E" title="Trench League gameplay trailer" loading="lazy" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/U1U60Q2gp5c" title="Trench League gameplay trailer" loading="lazy" allowfullscreen></iframe></div>
       <h4>Trench League — Gameplay Trailer</h4>
     </div>
     <div>

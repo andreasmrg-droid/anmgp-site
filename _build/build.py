@@ -135,13 +135,13 @@ def game_page(g):
   </div>
   <h3 style="margin-top:34px">Downloads</h3>
   <div class="dl">{dls}</div>
-  <p class="note">Screenshots are real in-game captures. Assets may be used for coverage of {g['name']}. Last updated 31 Oct 2026.</p>
+  <p class="note">Screenshots are real in-game captures. Assets may be used for coverage of {g['name']}. Last updated {g.get('updated','31 Oct 2026')}.</p>
 </div></section>
 ''' + footer()
     open(f'{R}/{slug}/index.html', 'w').write(page)
     return fact_txt
 
-TL = dict(slug='trench-league', name='Trench League', appid=5378190, steam_name='Trench_League', cls='tl', yt='cHix4J8GH2E', hero_logo=True,
+TL = dict(updated='18 Nov 2026', slug='trench-league', name='Trench League', appid=5378190, steam_name='Trench_League', cls='tl', yt='U1U60Q2gp5c', hero_logo=True,
   tags=['PC · Steam', 'Free demo out now', 'Local &amp; online multiplayer'],
   tagline='A brutal top-down armored sport. Two buttons, one spiked steel ball, and a crowd that wants blood more than goals.',
   short="Punch your way to the spiked steel ball and smash it into the enemy cage. The side with the most breaches wins. Knock rivals out and the Reclaim drags them off. Face opponents from different planets of the Solar System and fight your way to the Solar Final! Test your skills against real opponents!",
@@ -159,9 +159,9 @@ TL = dict(slug='trench-league', name='Trench League', appid=5378190, steam_name=
   facts_html=[('Developer / publisher','ANMGP Studio'),('Platform','PC (Windows) · Steam'),('Release','Coming soon · Free demo out now on Steam'),('Price','TBA'),
               ('Genre','Top-down action sport with club management'),('Modes','Championship career, The Cut, custom matches vs CPU, local hot seat (1 vs 1, co-op, Hot Seat Cup), online (1 vs 1, co-op, 2 vs 2, cups &amp; tournaments, ranked ladder)'),
               ('Controls','Keyboard or gamepad'),('Steam','<a href="https://store.steampowered.com/app/5378190/Trench_League/" target="_blank" rel="noopener">store.steampowered.com/app/5378190</a>'),
-              ('Trailer','<a href="https://www.youtube.com/watch?v=cHix4J8GH2E" target="_blank" rel="noopener">YouTube</a>'),('Press contact','<a href="mailto:info@anmgp.com">info@anmgp.com</a>')],
+              ('Trailer','<a href="https://www.youtube.com/watch?v=U1U60Q2gp5c" target="_blank" rel="noopener">YouTube</a>'),('Press contact','<a href="mailto:info@anmgp.com">info@anmgp.com</a>')],
 )
-TL['facts_txt'] = [(k, v.split('<a')[0].strip() if '<a' in v and k not in ('Steam', 'Trailer', 'Press contact') else ({'Steam': 'https://store.steampowered.com/app/5378190/', 'Trailer': 'https://www.youtube.com/watch?v=cHix4J8GH2E', 'Press contact': 'info@anmgp.com'}.get(k, v))) for k, v in TL['facts_html']]
+TL['facts_txt'] = [(k, v.split('<a')[0].strip() if '<a' in v and k not in ('Steam', 'Trailer', 'Press contact') else ({'Steam': 'https://store.steampowered.com/app/5378190/', 'Trailer': 'https://www.youtube.com/watch?v=U1U60Q2gp5c', 'Press contact': 'info@anmgp.com'}.get(k, v))) for k, v in TL['facts_html']]
 
 AE = dict(slug='automotive-empire', name='Automotive Empire', appid=5190350, steam_name='Automotive_Empire', cls='ae', yt='Cq5T_GW8Kr4', hero_logo=True,
   tags=['PC · Steam', 'Free demo coming soon', 'Single-player'],
